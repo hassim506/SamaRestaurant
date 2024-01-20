@@ -1,0 +1,7 @@
+{
+  "name": "SamaRestaurant",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

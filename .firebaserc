@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "samarestaurant-5e778": {
+      "hosting": {
+        "app": [
+          "samarestaurant-5e778"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "samarestaurant-5e778"
+  }
+}

@@ -16,8 +16,25 @@ const routes: Routes = [
         loadChildren: () => import('../Screens/cart/cart.module').then( m => m.CartPageModule)
       },
       {
+        path: 'signup',
+        loadChildren: () => import('../Screens/signup/signup.module').then( m => m.SignupPageModule)
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('../Screens/login/login.module').then( m => m.LoginPageModule)
+      },
+      {
+        path: 'reset-password',
+        loadChildren: () => import('../Screens/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+      },
+      {
+        path: 'landing',
+        loadChildren: () => import('../Screens/landing/landing.module').then( m => m.LandingPageModule)
+      },
+    
+      {
         path: '',
-        redirectTo: 'listing',
+        redirectTo: 'landing',
         pathMatch:'full'
       }
     ]

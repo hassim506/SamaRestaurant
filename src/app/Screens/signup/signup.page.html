@@ -1,0 +1,45 @@
+<ion-header hidden>
+  <ion-toolbar class="text1" >
+    <ion-title color="light">Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding>
+    <ion-item lines="none" >
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+       <ion-img src="assets/images/chef4.png"></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-item lines="none"  >
+      <div class="cart-title">
+        <h1 class="ion-no-margin">Food |_^^_| Store </h1>
+        <h5 class="ion-no-margin">Votre Restaurant en Ligne</h5>
+      </div>
+    </ion-item>
+
+
+    <ion-item lines="none" >
+      
+    </ion-item>
+    
+    <ion-item lines="none" color="light" class="rowStyle">
+      <ion-input type="text" placeholder="your name" required [(ngModel)]="user.name"></ion-input>
+      <ion-icon name=""></ion-icon>
+    </ion-item>
+    <ion-item lines="none" color="light" class="rowStyle">
+      <ion-input type="text" placeholder="your email" required [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item lines="none" color="light" class="rowStyle">
+      <ion-input type="password" placeholder="your password" required [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="align" >
+      <ion-button color="none" class="rowStyleButton" (click)="signup()" [routerLink]="['/login']">SignUp</ion-button>
+    </ion-item>
+    <ion-item lines="none" class="align" >
+      <ion-button class="rowStyleButton" (click)="gotoLogin()">Cancel</ion-button>
+    </ion-item>
+</ion-content>

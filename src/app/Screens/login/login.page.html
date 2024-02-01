@@ -1,0 +1,48 @@
+<ion-header hidden>
+  <ion-toolbar class="text1">
+    <ion-title color="light">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" padding>
+
+  <ion-item lines="none" color="light">
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-img src="assets/images/chef4.png"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <ion-item lines="none"  color="light">
+    <div class="cart-title">
+      <h1 class="ion-no-margin">Food |_^^_| Store </h1>
+      <h5 class="ion-no-margin">Votre Restaurant en Ligne</h5>
+    </div>
+  </ion-item>
+
+  <ion-item lines="none" color="light">
+  </ion-item>
+    
+ 
+    
+    <ion-item lines="none"  class="rowStyle">
+      <ion-input class="input" type="text" placeholder="your email"  [(ngModel)]="email" required></ion-input>
+    </ion-item>
+    <ion-item lines="none"  class="rowStyle">
+      <ion-input class="input" type="password" placeholder="your password"  [(ngModel)]="password" required></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none" class="align" >
+      <ion-button class="rowStyleButton" [routerLink]="['/home/listing']" (click)="login()"  >Login</ion-button>
+    </ion-item>
+    <div>
+      <a  [routerLink]="['/reset-password']">Mot de passe Oublier?</a>
+    </div>
+    <ion-item lines="none" class="signupButton" >
+      <ion-button class="rowStyleSignupButton" (click)="gotoSignup()"> Pas de compte? Sign Up</ion-button>
+    </ion-item>
+
+ 
+</ion-content>

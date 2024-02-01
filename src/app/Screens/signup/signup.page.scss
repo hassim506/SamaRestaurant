@@ -1,0 +1,118 @@
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  ion-item{
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .text1{
+    --background: #6b45bc;
+  }
+  
+  
+  .logo {
+    font-size: 50vh;
+    --background: #6b45bc;
+    
+    
+  } ion-img{
+    height: 18rem;
+    width: 55rem;
+    margin-left: 17%;
+    align-items: center;
+
+
+    position: absolute;
+    top: -50%;
+    width: 50%;
+    left: 35%;
+    transform: translateX(-50%);
+    border-radius: 1.5rem;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+
+
+
+
+    
+    
+
+
+    }
+  
+        h1{
+           
+            font-weight: bolder;
+            font-size: 2.2rem;
+          
+            margin-left: 2rem;
+        }
+        h5{
+            font-size: 1rem;
+            margin-top: .5rem;
+            text-align: center;
+            margin-left: 2rem;
+            color:   #6b45bc;
+            text-decoration: 20% solid underline #ffb800 ;
+
+           
+        }
+        
+        
+  
+  ion-icon {
+   
+    width: 100%;
+    height: 100%;
+  
+    text-align: center;
+   
+  
+  }
+  
+  ion-row {
+    height: 150px;
+  }
+  
+  
+  .text1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .text2 {
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  
+  .rowStyle {
+    left: 10%;
+    width: 80%;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+  
+  .align {
+    left: 10%;
+    width: 80%;
+    border-radius: 30px;
+    margin-top: 10px;
+    border: 3px lightgrey solid;
+    --background: #6b45bc;
+  }
+  
+  .rowStyleButton {
+    font-size: 18px;
+    width: 100%;
+    --background: #6b45bc;
+
+    
+    
+  }

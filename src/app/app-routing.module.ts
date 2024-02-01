@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'landing',
     pathMatch: 'full'
   },
  
@@ -16,7 +16,25 @@ const routes: Routes = [
     path: 'detail/:id',
     loadChildren: () => import('./Screens/detail/detail.module').then( m => m.DetailPageModule)
   },
-
+  {
+    path: 'signup',
+    loadChildren: () => import('./Screens/signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./Screens/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'reset-password',
+    loadChildren: () => import('./Screens/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+  },
+  {
+    path: 'landing',
+    loadChildren: () => import('./Screens/landing/landing.module').then( m => m.LandingPageModule)
+  },
+  
+  
+ 
 ];
 
 @NgModule({

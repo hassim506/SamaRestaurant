@@ -1,0 +1,136 @@
+.container{
+    text-align: center;
+    height: 30rem;
+    width: 55rem;
+    margin-top: 30%;
+
+    ion-img{
+    height: 18rem;
+    width: 55rem;
+    margin-left: 17%;
+    align-items: center;
+
+
+    position: absolute;
+    top: -1%;
+    width: 50%;
+    left: 35%;
+    transform: translateX(-50%);
+    border-radius: 1.5rem;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+
+
+
+
+    
+    
+
+
+    }
+    
+}
+ion-content{
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --background:#6b45bc;
+    position: relative;
+
+    ion-fab-button{
+        --background: #6b45bc;
+        font-weight: 700;
+        color: #fff;
+        width: 70px;
+        height: 50px;
+    }
+    .cart{
+        height: 75%;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        border-radius: 6rem 6rem 0 0;
+        padding: 2rem   ; 
+    }
+}
+
+
+ion-content{
+    --background:#6b45bc;
+   
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0.5rem;
+
+        ion-button{
+            height: 60px;
+            width: 60px;
+
+            ion-icon{
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+    .cart{
+        height: 75%;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        border-radius: 10rem 10rem 0 0;
+        padding: 2rem   ; 
+
+        .image{
+            position: absolute;
+            top: -6.5rem;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cart-title{
+            margin-top: -30%;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+            margin-left: -6%;
+        }
+        h1{
+           
+            font-weight: bolder;
+            font-size: 2.2rem;
+        }
+        h5{
+            font-size: 1rem;
+            margin-top: .5rem;
+            text-align: center;
+            margin-left: -3rem;
+            color:   #6b45bc;
+            text-decoration: 8px solid underline #ffb800 ;
+
+           
+        }
+        .about{
+            margin-bottom: 2.5rem;
+            h1{
+                font-weight: 600;
+            }
+            .pa{
+                font-size: 1rem;
+                line-height: 1.6rem;
+                color: #8e8d8d;
+                margin-top:  3rem;
+                margin-left: -3rem;
+               
+            }
+
+        }
+        
+        
+    }
+}

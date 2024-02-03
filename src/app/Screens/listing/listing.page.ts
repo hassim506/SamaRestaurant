@@ -25,25 +25,25 @@ export class ListingPage implements OnInit {
       {
         id: 1,
         label: 'All',
-        image: 'assets/images/icons/Pizza.png',
+        image: 'assets/images/icons/four.png',
         active: true,
     },
     {
       id: 2,
-      label: 'Burgers',
+      label: 'Pizza',
       image: 'assets/images/icons/Pizza.png',
       active: false,
   },
   {
     id: 3,
-    label: 'Dishes',
+    label: 'Poullet',
     image: 'assets/images/icons/poulle.png',
     active: false,
 },
 {
   id: 4,
   label: 'Sushi',
-  image: 'assets/images/icons/Pizza.png',
+  image: 'assets/images/icons/Tacos.png',
   active: false,
 },
    

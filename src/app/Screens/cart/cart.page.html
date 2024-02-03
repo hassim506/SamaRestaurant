@@ -25,5 +25,9 @@
  </div>
 
  <!--Boutton de paiment-->
+ <app-button [routerLink]="['/Chekout']">
+
+  Commander: <span><sup>FcFa</sup>{{totalAmount$|async| number:'.'}}</span>
+ </app-button>
  
 </ion-content>

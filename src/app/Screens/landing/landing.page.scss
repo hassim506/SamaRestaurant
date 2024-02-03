@@ -76,6 +76,23 @@ ion-content{
         }
 
     }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0.5rem;
+
+        ion-button{
+            height: 60px;
+            width: 60px;
+
+            ion-icon{
+                font-size: 2rem;
+               
+            }
+        }
+
+    }
+
 
     .cart{
         height: 75%;

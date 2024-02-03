@@ -20,23 +20,40 @@ export class CartPage implements OnInit {
   ngOnInit() {
     this.CartItem$ = this.cartService.getCart();
     this.totalAmount$ = this.cartService.getTotalAmount();
+
+
   }
+
+
+  /**
+   * 
+   * @param item 
+   * fonction qui permet daugment le nombre d'element dans le panier
+   */
 
   onIncrease(item: CartItem){
     this.cartService.changQty(1, item.id);
   }
 
+  /**
+   * 
+   * @param item 
+   * fonction qui permet de dimunier le nombre de produit dans le panier 
+   */
   onDecrease(item: CartItem){
 
     if(item.quantity == 1) this.removeFromCart(item);
     else this.cartService.changQty(-1, item.id);
   }
 
+
   /*
-  La fonction removeFromCart semble être une méthode d'une classe qui est utilisée pour afficher 
+  La fonction removeFromCart est une méthode d'une classe qui est utilisée pour afficher 
   une boîte de dialogue de confirmation de
    suppression d'un élément du panier d'achat.
   */
+
+
 
   async removeFromCart(item: CartItem){
 

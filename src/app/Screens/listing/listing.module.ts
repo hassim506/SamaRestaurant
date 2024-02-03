@@ -10,6 +10,7 @@ import { ListingPage } from './listing.page';
 import { SearchbarModule } from 'src/app/components/searchbar/searchbar.module';
 import { CategoryItemModule } from 'src/app/components/category-item/category-item.module';
 import { FoodCardModule } from 'src/app/components/food-card/food-card.module';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({

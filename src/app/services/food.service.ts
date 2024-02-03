@@ -13,6 +13,7 @@ export class FoodService{
                 price: 1200,
                 image: 'assets/images/Sushi.png',
                 description:'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'
+                
             },
             {
                 id: 2,
@@ -37,16 +38,16 @@ export class FoodService{
             },
             {
                 id: 5,
-                title: 'Ensemble tacos frittes',
+                title: ' Poullet-Roti',
                 price: 2000,
-                image: 'assets/images/Pizza-.png',
+                image: 'assets/images/poullet_roti.png',
                 description:'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'
             },
             {
                 id: 6,
-                title: 'Poullet-Rotti',
+                title: 'Tacos frittes',
                 price: 3000,
-                image: 'assets/images/Pizza-.png',
+                image: 'assets/images/Tacos.png',
                 description:'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'
             },
         ];

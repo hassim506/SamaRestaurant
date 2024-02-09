@@ -2,6 +2,7 @@
 
   <ion-menu menuId="main-menu" contentId="main">
     <ion-content>
+      <!--bloc des informations de lutilisateur en session dans le side bar-->
       <div class="menu-header-bg">
         <div class="header-content">
           <img src="../assets/images/face.png">
@@ -11,28 +12,30 @@
           </ion-label>
         </div>
       </div>
-
+<!--button add branch-->
       <div class="action-button">
        <p></p>
       </div>
+
+        <!--Le menu de note side Bar-->
       <ion-list lines="none" class="menu-items">
        <a href="home/listing" style="text-decoration: none;"> <ion-item>
-          <ion-icon name="home-outline" class="active" ></ion-icon>Page d'accueil
+          <ion-icon name="home-outline" class="active"  id="active" ></ion-icon>Page d'accueil
         </ion-item>
       </a>
       <a href="home/landing" style="text-decoration: none;">
         <ion-item >
-          <ion-icon name="person-outline"></ion-icon> A propos de nous
+          <ion-icon name="person-outline" class="active"></ion-icon> A propos de nous
         </ion-item>
       </a>
       <a href="" style="text-decoration: none;">
         <ion-item>
-          <ion-icon name="heart-outline"></ion-icon> Vos plats favoris
+          <ion-icon name="heart-outline" class="active"></ion-icon> Vos plats favoris
         </ion-item>
       </a>
       <a href="home/cart" style="text-decoration: none;">
         <ion-item >
-          <ion-icon name="cart-outline"></ion-icon> Consulter votre panier
+          <ion-icon name="cart-outline" class="active"></ion-icon> Consulter votre panier
         </ion-item>
       </a>
 

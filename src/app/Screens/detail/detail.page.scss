@@ -1,6 +1,7 @@
 ion-content{
     --background:#6b45bc;
     position: relative;
+    height: 160px;
 
     .header{
         display: flex;
@@ -19,7 +20,7 @@ ion-content{
     }
 
     .cart{
-        height: 75%;
+        height: 82%;
         width: 100%;
         background-color: #fff;
         position: absolute;

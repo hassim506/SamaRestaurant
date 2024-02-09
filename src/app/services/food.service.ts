@@ -5,6 +5,8 @@ import { Food } from "../models/food.model";
     providedIn: 'root'
 })
 export class FoodService{
+
+    //importation de notre FoodService disponible dans l'interface Food que nous avons creer dans le food.model.ts
     getFoods(): Food[]{
         return[
             {

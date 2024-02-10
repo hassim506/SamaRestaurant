@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Validation de commande</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h1>Formulaire de Validation </h1>
+<p>Veillez reinseigner les informations ci-dessous pour valider votre commande !</p>
+
+<div class="validation">
+  <form>
+    <ion-item lines="none" color="light" class="rowStyle">
+      <ion-input type="text" placeholder="Nom" required></ion-input>
+    </ion-item>
+    <ion-item lines="none" color="light" class="rowStyle">
+      <ion-input type="text" placeholder="Prenom" class="rowStyle" required></ion-input>
+    </ion-item>
+    <ion-item lines="none" color="light" class="rowStyle">
+      <ion-input type="text" placeholder="Adresse" class="rowStyle" required></ion-input>
+    </ion-item>
+    <ion-item lines="none" color="light" class="rowStyle" >
+      <ion-input type="paiment--" placeholder="Telephone" class="rowStyle" required></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="rowStyleValidationButton" >
+      <app-button>
+         Valider votre commande
+      </app-button>
+      
+    </ion-item>
+  </form>
+</div>
+</ion-content>

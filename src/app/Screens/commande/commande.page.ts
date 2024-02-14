@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { Food } from 'src/app/models/food.model';
 
 @Component({
   selector: 'app-commande',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommandePage implements OnInit {
 
-  constructor() { }
+  public textToCode!: string;
+  public myAngularxQrCode: string | null = null;
 
-  ngOnInit() {
+
+
+  createQRcode(){
+    this.myAngularxQrCode= this.textToCode;
+    this.textToCode="";
   }
 
+  constructor(
+   
+    ) { }
+  
+
+  ngOnInit() {
+   
+
+   
+
+}
 }

@@ -13,6 +13,11 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
+import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+import { StatusBar } from '@capacitor/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen/ngx';
+
+
 
 
 
@@ -39,7 +44,10 @@ measurementId: "G-3KKJCP5R3L"
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()), HttpClientModule, FormsModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+  SplashScreen,
+  QRScanner,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

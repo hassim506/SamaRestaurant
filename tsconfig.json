@@ -13,7 +13,7 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": true, 
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES5",
@@ -23,7 +23,7 @@
       "dom"
     ],
     "useDefineForClassFields": false
-  },
+  }, 
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

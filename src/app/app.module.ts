@@ -14,7 +14,6 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
-import { StatusBar } from '@capacitor/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 
 
@@ -42,7 +41,7 @@ measurementId: "G-3KKJCP5R3L"
     provideFirebaseApp(() => initializeApp(FIREBASE_CONFIG)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()), HttpClientModule, FormsModule
+    provideStorage(() => getStorage()), FormsModule,
   ],
   providers: [
   SplashScreen,

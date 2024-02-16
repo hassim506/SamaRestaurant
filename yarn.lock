@@ -336,9 +336,16 @@
   resolved "https://registry.npmjs.org/@assemblyscript/loader/-/loader-0.10.1.tgz"
   integrity sha512-H71nDOOL8Y7kWRLqf6Sums+01Q5msqBW2KhDUTemh1tvY04eSkSXrK0uj/4mmY0Xr16/3zyZmsrxN7CKuRbNRg==
 
+"@awesome-cordova-plugins/core@6.6.0":
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/@awesome-cordova-plugins/core/-/core-6.6.0.tgz#2d274d4e618ed968727b092aa927f1688b8c0a9c"
+  integrity sha512-mr2oI+qIoxgoccG57VMkkQdedvulIFJ+kyDeXZvrA1CSkFu1RzTwRvM6QuyA01f9i9G9hSSONpAp4v94h45LNA==
+  dependencies:
+    "@types/cordova" latest
+
 "@awesome-cordova-plugins/splash-screen@6.6.0":
   version "6.6.0"
-  resolved "https://registry.yarnpkg.com/@awesome-cordova-plugins/splash-screen/-/splash-screen-6.6.0.tgz#699f5195cea408c32cdc14ab4e5b2696fc1db952"
+  resolved "https://registry.npmjs.org/@awesome-cordova-plugins/splash-screen/-/splash-screen-6.6.0.tgz"
   integrity sha512-j3Rb6b10SPy59nsx5sfd0PY0ghHWPpOj5yTUx4TtBOIqreuWYTO2UdCMJEFpe/oobmgATjPgquqprmsubImDeQ==
   dependencies:
     "@types/cordova" latest
@@ -1956,6 +1963,13 @@
   version "1.2.1"
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
+
+"@ionic-native/core@^5.36.0":
+  version "5.36.0"
+  resolved "https://registry.npmjs.org/@ionic-native/core/-/core-5.36.0.tgz"
+  integrity sha512-lOrkktadlKYbYf1LrDyAtsu1JnQ0oCCdkOU7iHQ8oXnNOkMwobFfD2m62F1CoOr0u9LIkpYnZSPjng8lZbmbNw==
+  dependencies:
+    "@types/cordova" latest
 
 "@ionic-native/qr-scanner@^5.36.0":
   version "5.36.0"
@@ -4097,7 +4111,7 @@ copy-webpack-plugin@11.0.0:
 
 cordova-browser@^7.0.0:
   version "7.0.0"
-  resolved "https://registry.yarnpkg.com/cordova-browser/-/cordova-browser-7.0.0.tgz#1c19aa3e31bcc42c2f355962c09c17dac1c2d334"
+  resolved "https://registry.npmjs.org/cordova-browser/-/cordova-browser-7.0.0.tgz"
   integrity sha512-gNrjlIdtZYaQInPisTpcUdtTSSaYOApa2ew6ALXT9r8ZdsczTAlJigbVzRpOm/EP1HQw6gnMkeQhFZS9RN6nJg==
   dependencies:
     cordova-common "^5.0.0"
@@ -4137,11 +4151,6 @@ cordova-plugin-ionic-keyboard@^2.0.5:
   version "2.2.0"
   resolved "https://registry.npmjs.org/cordova-plugin-ionic-keyboard/-/cordova-plugin-ionic-keyboard-2.2.0.tgz"
   integrity sha512-yDUG+9ieKVRitq5mGlNxjaZh/MgEhFFIgTIPhqSbUaQ8UuZbawy5mhJAVClqY97q8/rcQtL6dCDa7x2sEtCLcA==
-
-cordova-plugin-ionic-webview@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-5.0.1.tgz"
-  integrity sha512-dF3x7ee8s7ITPImz8WG5HFMnzMW1LaCve+Pdm5WzonKxcwkmMsPrW2zoWuIFBTWjXvFyNoxprzRn6aq/WotvKg==
 
 cordova-plugin-qrscanner@^3.0.1:
   version "3.0.1"

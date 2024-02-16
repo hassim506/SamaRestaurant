@@ -14,6 +14,10 @@ export class CommandePage implements OnInit {
   public textToCode!: string;
   public myAngularxQrCode: string | null = null;
 
+//double fonction qui permet d'afficher le camera
+  public showCamera = false;
+public textScanned: string = '';
+
 
   constructor(
    
@@ -31,9 +35,41 @@ export class CommandePage implements OnInit {
      
   
   }
+  //fonction pour fermer le camera
+  closeCamera() {
+    this.showCamera = false;
+    this.qrScanner.hide(); // hide camera preview
+    this.qrScanner.destroy();
+  }
+  
+  //fonction pour creer un QRcode
   createQRcode(){
     this.myAngularxQrCode= this.textToCode;
     this.textToCode="";
+  }
+  
+  scanCode() {
+    this.showCamera = true;
+    // Optionally request the permission early
+    this.qrScanner.prepare()
+    .then((status: QRScannerStatus) => {
+      if (status.authorized) {
+        // On commence le scan
+        console.log('Scan en cours...' + JSON.stringify(status));
+        const scanSub = this.qrScanner.scan().subscribe((text: any) => {
+          console.log('Scanned something', text.result);
+          this.textScanned = text.result;
+          this.qrScanner.hide(); // hide camera preview
+          scanSub.unsubscribe(); // stop scanning
+          this.showCamera = false;
+        });
+      } else if (status.denied) {
+        // camera permission was permanently denied
+      } else {
+        // permission was denied, but not permanently. You can ask for permission again at a later time.
+      }
+    })
+    .catch((e: any) => console.log('Error is', e));
   }
   scancode() {
     this.qrScanner.prepare()
@@ -53,6 +89,7 @@ export class CommandePage implements OnInit {
          // camera permission was permanently denied
          // you must use QRScanner.openSettings() method to guide the user to the settings page
          // then they can grant the permission from there
+         
        } else {
          // permission was denied, but not permanently. You can ask for permission again at a later time.
        }

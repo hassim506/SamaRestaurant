@@ -5,6 +5,10 @@ import { Food } from 'src/app/models/food.model';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { Commande } from 'src/app/models/commande.model';
 import { ModalController } from '@ionic/angular';
+import { Plugins } from '@capacitor/core';
+const { CapacitorQRScanner } = Plugins;
+import { Platform } from '@ionic/angular';
+
 
 
 
@@ -23,8 +27,14 @@ export class CommandePage implements OnInit {
 public textScanned: string = '';
 
 
+
+
 Infos: Commande = {} as Commande;
   Command: any;
+  obj: any;
+  
+
+  
  
 
 
@@ -34,11 +44,14 @@ Infos: Commande = {} as Commande;
     public alertController: AlertController,
     private alertCtrl: AlertController, 
     private modalCtrl: ModalController,
-    private router: Router
+    private router: Router,
+    private platform: Platform
 
      
       ) {
         this.scancode();
+    
+        
        }
     
   
@@ -48,6 +61,44 @@ Infos: Commande = {} as Commande;
      
   
   }
+
+
+// ...
+
+
+
+  async Scan() {
+    await this.platform.ready();
+    try {
+      //  Appel à CapacitorQRScanner.scan()
+      const resultFromScanner = await CapacitorQRScanner;
+  
+      //  Vérification si le résultat est défini
+      if (resultFromScanner !== undefined) {
+        //  Vérification si le résultat est de type objet
+        if (typeof resultFromScanner === 'object') {
+          //  Vérification si le résultat a la propriété 'scan'
+          if ('scan' in resultFromScanner) {
+            // Accéder à la propriété 'scan' et obtenir le résultat
+            const scanResult = resultFromScanner['scan'];
+  
+            console.log('Résultat du scanner :', scanResult);
+  
+            // Utilisez scanResult comme nécessaire dans le reste de votre fonction.
+          } else {
+            console.warn('Le scanner a retourné un objet sans la propriété "scan".');
+          }
+        } else {
+          console.warn('Le scanner a retourné un résultat qui n\'est pas de type objet.');
+        }
+      } else {
+        console.warn('Le scanner a été annulé ou aucun résultat n\'a été détecté.');
+      }
+    } catch (error) {
+      console.error('Erreur lors de la numérisation :', error);
+    }
+  }
+ 
   //fonction pour fermer le camera
   closeCamera() {
     this.showCamera = false;
@@ -136,7 +187,7 @@ Infos: Commande = {} as Commande;
   async Chekout() {
     try {
       let alert = await this.alertCtrl.create({
-        header: 'Merci pour votre commande',
+        header: 'Confirmation',
         message: 'Votre commande a été validée avec succès',
         buttons: [
           {

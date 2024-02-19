@@ -32,24 +32,13 @@
   </form>
 </div>
 
-<ion-item lines="none">
-  <ion-label><b>Text à encoder</b></ion-label>
-  <ion-input [(ngModel)]="textToCode" placeholder="Entrer L'URL"></ion-input>
-</ion-item>
-<ion-button color="tertiary" expand="block" (click)="createQRcode()"  show="!ShowCamera">
-  <ion-icon slot="start" name="create"></ion-icon>
- Creer un Qrcode
-</ion-button>
+
+
 <div *ngIf="!showCamera">
-  <ion-item *ngIf="textScanned" lines="none">
-    <ion-label>
-      <p>Texte du QR Code</p>
-      <h2><b>{{ textScanned }}</b></h2>
-    </ion-label>
-  </ion-item>
-  <ion-button expand="block" (click)="scanCode()" >
+  
+  <ion-button expand="block" (click)="Scan()" >
     <ion-icon slot="start" name="qr-scanner"></ion-icon>
-    Scanner un QR Code
+    Scanner et Payer 
   </ion-button>
   <ion-icon *ngIf="showCamera" class="frame" name="qr-scanner"></ion-icon>
 </div>

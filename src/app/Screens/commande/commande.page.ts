@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 import { Food } from 'src/app/models/food.model';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
+import { Commande } from 'src/app/models/commande.model';
+import { ModalController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-commande',
@@ -19,10 +23,19 @@ export class CommandePage implements OnInit {
 public textScanned: string = '';
 
 
+Infos: Commande = {} as Commande;
+  Command: any;
+ 
+
+
   constructor(
-   
+    private toasCtrl: ToastController,
     private qrScanner: QRScanner,
-    public alertController: AlertController
+    public alertController: AlertController,
+    private alertCtrl: AlertController, 
+    private modalCtrl: ModalController,
+    private router: Router
+
      
       ) {
         this.scancode();
@@ -97,5 +110,48 @@ public textScanned: string = '';
     .catch((e: any) => console.log('Error is', e));
   }
 
-  
+  getInfos(){
+    const Infos: Commande ={
+      Nom: this.Infos.Nom,
+      Prenom: this.Infos.Prenom,
+      Adresse: this.Infos.Adresse,
+      Telephone: this.Infos.Telephone,
+     
+    }
+
+    this.Command. addInfos(Infos);
+    this.presentToast();
+  }
+
+  async presentToast(){
+    const toast = await  this.toasCtrl.create({
+      message:'Votre commande a été Validé avec succées',
+      mode: 'ios',
+      duration: 1000,
+      position: 'top',
+    });
+
+    toast.present();
+  }
+  async Chekout() {
+    try {
+      let alert = await this.alertCtrl.create({
+        header: 'Merci pour votre commande',
+        message: 'Votre commande a été validée avec succès',
+        buttons: [
+          {
+            text: 'OK',
+            handler: () => {
+              this.modalCtrl.dismiss();
+              this.router.navigate(['/home']); // chemin de redirection vers la page d'accueil aprés la validation de commande
+            }
+          }
+        ]
+      });
+
+      alert.present();
+    } catch (error) {
+      console.error('Erreur dans la fonction Chekout :', error);
+    }
+  }
 }

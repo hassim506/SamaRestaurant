@@ -15,8 +15,7 @@
       <ion-input type="text" placeholder="Nom" required></ion-input>
     </ion-item>
     <ion-item lines="none" color="light" class="rowStyle">
-      <ion-input type="text" placeholder="Prenom" class="rowStyle" requir
-      ed></ion-input>
+      <ion-input type="text" placeholder="Prenom" class="rowStyle" required></ion-input>
     </ion-item>
     <ion-item lines="none" color="light" class="rowStyle">
       <ion-input type="text" placeholder="Adresse" class="rowStyle" required></ion-input>
@@ -25,7 +24,7 @@
       <ion-input type="paiment--" placeholder="Telephone" class="rowStyle" required></ion-input>
     </ion-item>
     <ion-item lines="none" class="rowStyleValidationButton" >
-      <app-button>
+      <app-button (click)="Chekout()">
          Valider votre commande
       </app-button>
       

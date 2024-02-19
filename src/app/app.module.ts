@@ -18,7 +18,7 @@ import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 
 
 
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';

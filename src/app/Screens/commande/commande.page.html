@@ -34,10 +34,10 @@
 
 
 
-<div *ngIf="!showCamera">
+<div *ngIf="!showCamera" >
   
-  <ion-button expand="block" (click)="Scan()" >
-    <ion-icon slot="start" name="qr-scanner"></ion-icon>
+  <ion-button expand="block" (click)="Scan()" color="tertiary">
+    <ion-icon slot="start" name="qr-scanner" class="couleur"></ion-icon>
     Scanner et Payer 
   </ion-button>
   <ion-icon *ngIf="showCamera" class="frame" name="qr-scanner"></ion-icon>

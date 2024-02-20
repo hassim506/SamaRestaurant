@@ -35,7 +35,11 @@ const routes: Routes = [
   {
     path: 'commande',
     loadChildren: () => import('./Screens/commande/commande.module').then( m => m.CommandePageModule)
+  },  {
+    path: 'profile',
+    loadChildren: () => import('./Screens/profile/profile.module').then( m => m.ProfilePageModule)
   },
+
   
   
  

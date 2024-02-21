@@ -16,7 +16,9 @@
   </div>
 
   <!--SearchBar-->
-<app-searchbar></app-searchbar>
+<app-searchbar  >
+  <ion-app *ngFor="let item of categories"></ion-app>
+</app-searchbar>
 
 <!--Category-->
 <div class="categories">

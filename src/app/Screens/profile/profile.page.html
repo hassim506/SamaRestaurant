@@ -1,8 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
  <div class="main_content_div">
@@ -16,6 +12,69 @@
     </div>
     <div class="user_back" [style.backgroundImage]="'url(assets/images/chef4.png)'"></div>
   </div>
-  <div class="content_div"></div>
+  <div class="content_div">
+    <div class="test_details">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6">
+            <div class="flex_div">
+              <div class="round_div">
+                <ion-icon name="heart-outline" class="img"></ion-icon>
+              </div>
+              <div class="details">
+                <ion-label class="bold_lbl">100</ion-label>
+                <ion-label class="small_lbl">Jaime</ion-label>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div class="flex_div">
+              <div class="round_div">
+                <ion-icon name="time-outline" class="img"></ion-icon>
+              </div>
+              <div class="details">
+                <ion-label class="bold_lbl">2hr 10min</ion-label>
+                <ion-label class="small_lbl">Time</ion-label>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div class="flex_div">
+              <div class="round_div">
+                <ion-icon name="star-outline" class="img"></ion-icon>
+              </div>
+              <div class="details">
+                <ion-label class="bold_lbl">70 Q/Hr</ion-label>
+                <ion-label class="small_lbl">Vos plats favoris</ion-label>
+                
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <!--On va mettre une div qui va gerer les listes-->
+    <div class="list_div">
+      <ion-label>Editer Votre profile</ion-label>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+
+    </div>
+    <div class="list_div">
+      <ion-label>Vos Plats Favoris</ion-label>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+
+    </div>
+    <div class="list_div">
+      <ion-label>Nous laisser des étoiles</ion-label>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+
+    </div>
+    <div class="list_div">
+      <ion-label>Se deconnecter</ion-label>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+
+    </div>
+  </div>
  </div>
 </ion-content>

@@ -12,8 +12,13 @@ import { FoodService } from 'src/app/services/food.service';
 export class ListingPage implements OnInit {
  categories: Category [] = [];
  foods: Food[] = [];
+ res: any;
 
-  constructor(private foodService: FoodService, private router: Router) { }
+  constructor(private foodService: FoodService, private router: Router) {
+    /*his.foodService.getJsonData().subscribe(()=>{
+      alert(JSON.stringify(this.res));
+    });*/
+   }
 
   ngOnInit() {
     this.getCategories();

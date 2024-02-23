@@ -1,10 +1,13 @@
 import { Injectable } from "@angular/core";
 import { Food } from "../models/food.model";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
     providedIn: 'root'
 })
 export class FoodService{
+
+    constructor(){}
 
     //importation de notre FoodService disponible dans l'interface Food que nous avons creer dans le food.model.ts
     getFoods(): Food[]{
@@ -60,4 +63,8 @@ export class FoodService{
     getFood(id: number): Food | undefined {
         return this.getFoods().find((food) => food.id == id);
     }
+    /*getJsonData(){
+        return this.http.get('assets/food.json')
+    }*/
+
 }

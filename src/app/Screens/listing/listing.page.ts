@@ -13,6 +13,8 @@ export class ListingPage implements OnInit {
  categories: Category [] = [];
  foods: Food[] = [];
  res: any;
+ indexOf: any;
+
 
  
   constructor(private foodService: FoodService, private router: Router) {
@@ -61,6 +63,60 @@ export class ListingPage implements OnInit {
     this.router.navigate(['detail', id]);
 
   }
+  public Foods: Food[] =[
+    
+      {
+         id: 1,
+         title: "'seadFood'",
+          price: 1200,
+          image: "'assets/images/Sushi.png'",
+          description:"'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'"
+          
+      },
+      {
+          id: 2,
+          title: "'Hamburguer'",
+          price: 1600,
+         image: "'assets/images/Burguers.png'",
+          description:"'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'"
+      },
+      {
+          id: 3,
+          title: "'Pizza'",
+          price: 2500,
+          image: "assets/images/Pizza-.png",
+          description:"'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'"
+      },
+      {
+          id: 4,
+          title: "'Chawarma'",
+         price: 3500,
+          image: "'assets/images/all.png'",
+          description:"'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'"
+      },
+      {
+          id: 5,
+          title: "' Poullet-Roti'",
+          price: 2000,
+         image: "'assets/images/poullet_roti.png'",
+          description:"'In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water'"
+      },
+      {
+          id: 6,
+          title: "'Tacos frittes'",
+          price: 3000,
+          image: "'assets/images/Tacos.png'",
+          description:"In addition to the freshet seafood, there are core, cilantro, and tomatoes: their first, became mayonnaise,the second-cream,the third-spice tomato water"
+      }
+  
+
+  ]
+  public results = [...this.Foods];
+
+  handlerInput(event: { target: { value: string; }; }) {
+    const query = event.target.value.toLowerCase(); // Convertissez la requête en minuscules pour une comparaison insensible à la casse
+    this.results = this.Foods.filter(item => item.title.toLowerCase().includes(query));
+}
 
 }
 

@@ -17,7 +17,11 @@
 
   <!--SearchBar-->
 <app-searchbar  >
-  <ion-app *ngFor="let item of categories"></ion-app>
+  <ion-app *ngFor="let item of categories">
+  <ion-item *ngFor="let result of results">
+  <ion-label>{{result}}</ion-label>
+</ion-item>
+  </ion-app>
   
 </app-searchbar>
 

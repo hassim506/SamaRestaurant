@@ -14,6 +14,7 @@ export class ListingPage implements OnInit {
  foods: Food[] = [];
  res: any;
 
+ 
   constructor(private foodService: FoodService, private router: Router) {
     /*his.foodService.getJsonData().subscribe(()=>{
       alert(JSON.stringify(this.res));
@@ -23,6 +24,8 @@ export class ListingPage implements OnInit {
   ngOnInit() {
     this.getCategories();
     this.foods = this.foodService.getFoods();
+
+    
   }
 
   getCategories(){

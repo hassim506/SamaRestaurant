@@ -1,0 +1,33 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../../assets/images/foods/poulet-frites.jpg');
+    background-size: cover;
+    background-position: center;
+   .box{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px rgba(0 0 0 / 0.3);
+    .titre{
+        border-top: 15px solid #6b45bc;
+        padding-top: 10px;
+    }
+   } 
+}
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 20px;
+    align-items: center;
+    margin-left: 5%;
+    
+}
+ion-icon {
+    color: #6b45bc;
+    align-items: center;
+}
+    

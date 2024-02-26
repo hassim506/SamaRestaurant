@@ -39,6 +39,11 @@ const routes: Routes = [
         path: 'profile',
         loadChildren: () => import('../Screens/profile/profile.module').then( m => m.ProfilePageModule)
       },
+      {
+        path: 'contact',
+        loadChildren: () => import('../Screens/contact/contact.module').then( m => m.ContactPageModule)
+      },
+    
     
       {
         path: '',

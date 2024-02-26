@@ -11,4 +11,6 @@ export class FoodCardComponent  {
  @Input() item: Food  = {} as Food;
  
  @Output() clicked = new EventEmitter();
+
+ 
 }

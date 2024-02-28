@@ -27,17 +27,17 @@
     </ion-item>
     
     <ion-item lines="none" color="light" class="rowStyle">
-      <ion-input type="text" placeholder="your name" required [(ngModel)]="user.name"></ion-input>
+      <ion-input type="text" placeholder="your name" required [(ngModel)]="name"></ion-input>
       <ion-icon name=""></ion-icon>
     </ion-item>
     <ion-item lines="none" color="light" class="rowStyle">
-      <ion-input type="text" placeholder="your email" required [(ngModel)]="user.email"></ion-input>
+      <ion-input type="text" placeholder="your email" required [(ngModel)]="email"></ion-input>
     </ion-item>
     <ion-item lines="none" color="light" class="rowStyle">
-      <ion-input type="password" placeholder="your password" required [(ngModel)]="user.password"></ion-input>
+      <ion-input type="password" placeholder="your password" required [(ngModel)]="password"></ion-input>
     </ion-item>
     <ion-item lines="none" class="align" >
-      <ion-button color="none" class="rowStyleButton" (click)="signup()" [routerLink]="['/login']">SignUp</ion-button>
+      <ion-button color="none" class="rowStyleButton" (click)="signup()">SignUp</ion-button>
     </ion-item>
     <ion-item lines="none" class="align" >
       <ion-button class="rowStyleButton" (click)="gotoLogin()">Cancel</ion-button>
